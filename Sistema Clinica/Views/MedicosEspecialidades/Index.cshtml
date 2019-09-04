@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Sistema_Clinica.Models.MedicoEspecialidad>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Especialidad.esp_Especialidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Medico.med_nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Especialidad.esp_Especialidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Medico.med_nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.mes_idMedicoEspecialidad }) |
+            @Html.ActionLink("Details", "Details", new { id=item.mes_idMedicoEspecialidad }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.mes_idMedicoEspecialidad })
+        </td>
+    </tr>
+}
+
+</table>

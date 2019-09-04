@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Sistema_Clinica.Models.Empleado>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.emp_nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emp_apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emp_fechaNacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emp_telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emp_dui)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cargo.car_cargo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoEmpleado.tem_tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.usu_usuario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.emp_nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emp_apellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emp_fechaNacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emp_telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emp_dui)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cargo.car_cargo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoEmpleado.tem_tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario.usu_usuario)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.emp_idEmpleado }) |
+            @Html.ActionLink("Details", "Details", new { id=item.emp_idEmpleado }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.emp_idEmpleado })
+        </td>
+    </tr>
+}
+
+</table>

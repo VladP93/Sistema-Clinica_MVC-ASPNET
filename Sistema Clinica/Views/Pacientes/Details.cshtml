@@ -1,0 +1,98 @@
+﻿@model Sistema_Clinica.Models.Paciente
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Paciente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.pac_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pac_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pac_apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pac_apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pac_DUI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pac_DUI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pac_sexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pac_sexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pac_telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pac_telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pac_direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pac_direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pac_fechaNacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pac_fechaNacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pac_visible)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pac_visible)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoPaciente.tpa_tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoPaciente.tpa_tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.usu_usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.usu_usuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.pac_idPaciente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,74 @@
+﻿@model Sistema_Clinica.Models.Cita
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles de cita</h2>
+
+<div>
+    <h4>Cita</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Fecha de creación:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cit_fechaCreacion)
+        </dd>
+
+        <dt>
+            Fecha de cita:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cit_fechaCita)
+        </dd>
+
+        <dt>
+            Hora de cita:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cit_horaCita)
+        </dd>
+
+        <dt>
+            Consulta efectuada:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cit_consultaEfectuada)
+        </dd>
+
+        <dt>
+            Examen programado:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cit_examenprogramado)
+        </dd>
+
+        <dt>
+            Médico:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medico.med_nombre)
+        </dd>
+
+        <dt>
+            Paciente:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Paciente.pac_nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.cit_idCita }) |
+    @Html.ActionLink("Regresar", "Index")
+</p>

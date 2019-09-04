@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Sistema_Clinica.Models.agendaMedicoModel>
+
+@{
+    ViewBag.Title = "AgendaParaMedico";
+}
+
+
+
+<h2>Vista de Pacientes para Médico</h2>
+
+
+<form action="~/Medicos/AgendaParaMedicoDia" method="post">
+    <div class="form-group">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <h5>Filtrar día:</h5>
+                </div>
+                <div class="col-md-1">
+                    <input type="text" class="form-control" name="dia" placeholder="día">
+                </div>
+                <div class="col-md-1">
+                    <input type="text" class="form-control" name="mes" placeholder="mes">
+                </div>
+                <div class="col-md-1">
+                    <input type="text" class="form-control" name="anno" placeholder="año">
+                </div>
+                <div class="col-md-1">
+                    <button type="submit" class="btn btn-success">Filtrar</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</form>
+
+<!--
+<div class="container">
+
+    <div class="col-md-1">
+
+    </div>
+</div>
+    -->
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            Nombre del Paciente
+        </th>
+        <th>
+            Apellido del Paciente
+        </th>
+        <th>
+            Hora de la cita
+        </th>
+        <th>
+            Cita Efectuada
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.clPacNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.clPacApellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.clHoraCita)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.clCitaEfectuada)
+            </td>
+            <td>
+                @Html.ActionLink("Efectuar Consulta", "EfectuarConsulta", new { id = item.clPacIdPac })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<p>
+    @Html.ActionLink("Regresar", "Index")
+</p>

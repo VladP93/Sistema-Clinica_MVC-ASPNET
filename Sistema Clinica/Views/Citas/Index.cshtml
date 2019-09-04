@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Sistema_Clinica.Models.Cita>
+
+@{
+    ViewBag.Title = "Citas";
+}
+
+<h2>Listado de citas</h2>
+
+<p>
+    @Html.ActionLink("Crear nueva cita", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Fecha de creación
+        </th>
+        <th>
+            Fecha de cita
+        </th>
+        <th>
+            Hora de cita
+        </th>
+        <th>
+            Consulta eectuada
+        </th>
+        <th>
+            Examen programado
+        </th>
+        <th>
+            Médico
+        </th>
+        <th>
+            Paciente
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cit_fechaCreacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cit_fechaCita)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cit_horaCita)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cit_consultaEfectuada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cit_examenprogramado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Medico.med_nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Paciente.pac_nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.cit_idCita }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.cit_idCita }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.cit_idCita })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Sistema_Clinica.Models.RutaRol>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Rol.rol_rol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ruta.rut_ruta)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rol.rol_rol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ruta.rut_ruta)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.rxr_idrxr }) |
+            @Html.ActionLink("Details", "Details", new { id=item.rxr_idrxr }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.rxr_idrxr })
+        </td>
+    </tr>
+}
+
+</table>

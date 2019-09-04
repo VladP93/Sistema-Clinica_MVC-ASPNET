@@ -1,0 +1,80 @@
+﻿@model Sistema_Clinica.Models.Cita
+
+@{
+    ViewBag.Title = "Borrar";
+}
+
+<h2>Borrar Registro</h2>
+
+<h3>¿Seguro que desea eliminar este registro?</h3>
+<div>
+    <h4>Cita</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Fecha de creación:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cit_fechaCreacion)
+        </dd>
+
+        <dt>
+            Fecha de la cita:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cit_fechaCita)
+        </dd>
+
+        <dt>
+            Hora de la cita:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cit_horaCita)
+        </dd>
+
+        <dt>
+            Consulta Efectuada:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cit_consultaEfectuada)
+        </dd>
+
+        <dt>
+            Examen programado:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cit_examenprogramado)
+        </dd>
+
+        <dt>
+            Nombre del Médico:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medico.med_nombre)
+        </dd>
+
+        <dt>
+            Nombre del Paciente:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Paciente.pac_nombre)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar", "Index")
+        </div>
+    }
+</div>

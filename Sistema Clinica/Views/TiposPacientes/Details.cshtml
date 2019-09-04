@@ -1,0 +1,26 @@
+﻿@model Sistema_Clinica.Models.TipoPaciente
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TipoPaciente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tpa_tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tpa_tipo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.tpa_idTipoPaciente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

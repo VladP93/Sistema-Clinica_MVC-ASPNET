@@ -1,0 +1,48 @@
+﻿@model Sistema_Clinica.Models.Examan
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Examan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleado.emp_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empleado.emp_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Historial.his_idHistorial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Historial.his_idHistorial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Resultado.res_resultado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resultado.res_resultado)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

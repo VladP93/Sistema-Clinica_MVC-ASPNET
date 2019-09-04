@@ -1,0 +1,26 @@
+﻿@model Sistema_Clinica.Models.Rol
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Rol</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.rol_rol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rol_rol)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.rol_idRol }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

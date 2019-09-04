@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Log In</h2>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <div class="container" align="center">
+            <div class="card">
+                <div class="card-body">
+                    <form action="~/LogIn/Autenticacion" method="post">
+                        <div class="form-group">
+                            <label for="usuario"><b>Usuario</b></label>
+                            <input type="text" class="form-control" name="usuario" aria-describedby="usuarioAyuda" placeholder="Usuario">
+                            <small id="usuarioAyuda" class="form-text text-muted"><p style="color: black;">Ingrese su nombre de usuario, por favor.</p></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="pass"><b>Contraseña</b></label>
+                            <input type="password" class="form-control" name="pass" placeholder="Contraseña">
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4"></div>
+</div>

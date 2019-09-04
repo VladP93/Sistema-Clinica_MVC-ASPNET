@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Sistema_Clinica.Models.TipoPaciente>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tpa_tipo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tpa_tipo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.tpa_idTipoPaciente }) |
+            @Html.ActionLink("Details", "Details", new { id=item.tpa_idTipoPaciente }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.tpa_idTipoPaciente })
+        </td>
+    </tr>
+}
+
+</table>

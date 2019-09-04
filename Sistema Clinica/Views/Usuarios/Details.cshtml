@@ -1,0 +1,42 @@
+﻿@model Sistema_Clinica.Models.Usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.usu_usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usu_usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usu_contrasena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usu_contrasena)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rol.rol_rol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rol.rol_rol)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.usu_idUsuario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

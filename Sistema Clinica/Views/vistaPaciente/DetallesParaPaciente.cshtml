@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Sistema_Clinica.Models.VistaPacientes>
+
+@{
+    ViewBag.Title = "DetallesParaPaciente";
+}
+
+<h2>Bienvenido @Session["nombreUsuario"].ToString()</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Fecha de la cita
+        </th>
+        <th>
+            Nombre del Médico
+        </th>
+        <th>
+            Apellido del Médico
+        </th>
+        <th>
+            Hora de la cita
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.clFechaCita.Day)/@Html.DisplayFor(modelItem => item.clFechaCita.Month)/@Html.DisplayFor(modelItem => item.clFechaCita.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.clMedNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.clMedApellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.clHoraCita)
+            </td>
+        </tr>
+    }
+
+</table>
+
+<p>
+    @Html.ActionLink("Regresar", "Index")
+</p>

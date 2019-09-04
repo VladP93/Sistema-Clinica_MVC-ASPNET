@@ -1,0 +1,42 @@
+﻿@model Sistema_Clinica.Models.Examan
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Examan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleado.emp_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empleado.emp_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Historial.his_idHistorial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Historial.his_idHistorial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Resultado.res_resultado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resultado.res_resultado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.exm_idExamen }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

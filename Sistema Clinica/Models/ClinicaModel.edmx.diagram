@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3c06fb22597945339766dd00c7b57032" Name="Diagram1" ZoomLevel="75">
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.Cargo" Width="1.5" PointX="3" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.Cita" Width="1.5" PointX="10.5" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.Empleado" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.Especialidad" Width="1.5" PointX="7.5" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.Examan" Width="1.5" PointX="12.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.Historial" Width="1.5" PointX="10.5" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.HorarioConsulta" Width="1.5" PointX="9.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.Medico" Width="1.5" PointX="7.5" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.MedicoEspecialidad" Width="1.5" PointX="9.75" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.Paciente" Width="1.5" PointX="8.25" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.Receta" Width="1.5" PointX="12.75" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.Resultado" Width="1.5" PointX="10.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.Rol" Width="1.5" PointX="2.625" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.tblRuta" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.tblRutaRol" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.Secretaria" Width="1.5" PointX="5.25" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.TipoEmpleado" Width="1.5" PointX="3" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.TipoPaciente" Width="1.5" PointX="6" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicaPOO2018Model.Usuario" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Empleado__emp_id__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Cita__cit_idMedi__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Cita__cit_idPaci__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Receta__rec_idCi__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Empleado__emp_id__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Empleado__emp_id__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Examen__exm_idEm__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__MedicoEsp__mes_i__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Examen__exm_idHi__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Examen__exm_idRe__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Historial__his_i__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__HorarioCo__hor_i__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Medico__med_idSe__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Medico__med_idUs__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__MedicoEsp__mes_i__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Paciente__pac_id__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Paciente__pac_id__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__RutaRol__rxr_idR__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Usuario__usu_idR__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__RutaRol__rxr_idR__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicaPOO2018Model.FK__Secretari__sec_i__440B1D61" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

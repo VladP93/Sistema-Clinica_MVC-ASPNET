@@ -1,0 +1,82 @@
+﻿@model Sistema_Clinica.Models.Medico
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Medico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.med_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.med_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.med_apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.med_apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.med_telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.med_telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.med_direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.med_direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.med_jvpm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.med_jvpm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.med_precioConsulta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.med_precioConsulta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Secretaria.sec_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Secretaria.sec_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.usu_usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.usu_usuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.med_idMedico }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

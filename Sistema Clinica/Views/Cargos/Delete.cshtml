@@ -1,0 +1,32 @@
+﻿@model Sistema_Clinica.Models.Cargo
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Borrar</h2>
+
+<h3>¿Seguro que quiere eliminar este registro?</h3>
+<div>
+    <h4>Cargo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Cargo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.car_cargo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar", "Index")
+        </div>
+    }
+</div>
